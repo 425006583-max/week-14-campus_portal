@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Campus Portal{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'portal/css/style.css' %}">
+</head>
+<body>
+
+    <header>
+      <img src="{% static 'portal/images/logo.webp' %}" alt="Campus Portal logo">
+        <h1>Campus Portal</h1>
+        {% include 'portal/partials/navbar.html' %}
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Portal. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
